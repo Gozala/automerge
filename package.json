@@ -9,7 +9,7 @@
     "coverage": "nyc --reporter=html --reporter=text mocha",
     "test": "mocha",
     "testwasm": "mocha --file test/wasm.js",
-    "build": "webpack && copyfiles --flat @types/automerge/index.d.ts dist",
+    "build": "rollup -c",
     "prepublishOnly": "npm run-script build",
     "prepare": "npm run build"
   },
@@ -29,6 +29,8 @@
     "uuid": "^3.4.0"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "17.1.0",
+    "@rollup/plugin-node-resolve": "11.1.1",
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.9.1",
     "babel-core": "^6.26.3",
@@ -47,13 +49,12 @@
     "karma-typescript": "^5.0.0",
     "mocha": "^7.1.1",
     "nyc": "^15.1.0",
+    "rollup": "2.38.2",
     "sinon": "^9.0.1",
     "ts-node": "^8.6.2",
     "tsconfig-paths": "^3.9.0",
     "typescript": "^3.8.3",
-    "watchify": "^3.11.1",
-    "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.11"
+    "watchify": "^3.11.1"
   },
   "resolutions": {
     "karma-sauce-launcher/selenium-webdriver": "4.0.0-alpha.7"
