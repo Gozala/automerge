@@ -3,7 +3,7 @@
   "version": "0.14.0",
   "description": "Data structures for building collaborative applications",
   "main": "dist/automerge.js",
-  "types": "dist/index.d.ts",
+  "types": "@types/index.d.ts",
   "scripts": {
     "browsertest": "karma start",
     "coverage": "nyc --reporter=html --reporter=text mocha",
