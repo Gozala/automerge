@@ -50,6 +50,8 @@ declare module 'automerge' {
   function load<T>(data: Uint8Array, options?: any): Doc<T>
   function save<T>(doc: Doc<T>): Uint8Array
 
+  function setDefaultBackend(backend: typeof Backend):void
+
   // custom CRDT types
 
   class TableRow {
